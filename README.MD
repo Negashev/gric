@@ -17,3 +17,15 @@ negash/gric python3 \
 -m japronto clean_gitlab_registry.app \
 --worker-num 24 --port 8888
 ```
+
+- remove tag recursive
+
+    curl `/group/my-mono-repo/feature-123?clean-token=TOKEN`
+    
+    remove all images with tag `feature-123`
+    
+- remove unique image
+
+    curl `/extra_path?clean-token=TOKEN&path=group/simple-repo/some_name:feature-123`
+    
+    remove one image with tag `feature-123`
